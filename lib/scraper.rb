@@ -20,8 +20,6 @@ class Scraper
   students
 end
 
-
-
 def self.scrape_profile_page(profile_url = "http://students.learn.co/students/laura-correa.html")
   student = {}
   profile_page = Nokogiri::HTML(open("http://students.learn.co/students/laura-correa.html"))
