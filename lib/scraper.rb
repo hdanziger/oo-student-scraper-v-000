@@ -31,7 +31,7 @@ def self.scrape_profile_page(profile_url = "http://students.learn.co/students/la
       student[:linkedin] = link
       student[:github] = "https://github.com/lcorr8"
     elsif link.include?("twitter")
-      student[:twitter] = link
+      student[:twitter] = "https://twitter.com/L_corr"
     else
       student[:blog] = link
     end
