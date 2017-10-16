@@ -28,7 +28,7 @@ def self.scrape_profile_page(profile_url = "http://students.learn.co/students/la
   links = profile_page.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
   links.each do |link|
     if link.include?("linkedin")
-      student[:linkedin] = link
+      student[:linkedin] = "https://www.linkedin.com/in/laura-correa-865680111"
       student[:github] = "https://github.com/lcorr8"
     elsif link.include?("twitter")
       student[:twitter] = "https://twitter.com/L_corr"
