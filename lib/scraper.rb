@@ -6,11 +6,11 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url = "http://students.learn.co/")
-    #binding.pry
     index_page = Nokogiri::HTML(open("http://students.learn.co/"))
     students = []
     index_page.css(".roster-cards-container").each do |card|
       card.css(".student-card").each do |student|
+        binding.pry
         student_name = student.css('.student-name').text
         student_location = student.css('.student-location').text
         student_profile_url = "students/#{student.attr('href')}.html"
