@@ -6,10 +6,8 @@ class Student
 
   def initialize(student_hash)
     student_hash.each do |attribute, value|
-      self.send (("#{attribute}="), value)
+      self.send ("#{attribute}=", value)
     end
-  end
-
   end
 
   def self.create_from_collection(students_array)
