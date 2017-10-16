@@ -13,7 +13,7 @@ class Scraper
         #binding.pry
         student_name = student.css('.student-name').text
         student_location = student.css('.student-location').text
-        student_profile_url = "students/#{student.first_element_child.attr('href')}.html"
+        student_profile_url = "#{student.first_element_child.attr('href')}"
         students << {name: student_name, location: student_location, profile_url: student_profile_url}
     end
   end
