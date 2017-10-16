@@ -29,7 +29,7 @@ def self.scrape_profile_page(profile_url = "http://students.learn.co/students/la
   links.each do |link|
     if link.include?("linkedin")
       student[:linkedin] = link
-      student[:github] = link
+      student[:github] = "https://github.com/lcorr8"
     elsif link.include?("twitter")
       student[:twitter] = link
     else
